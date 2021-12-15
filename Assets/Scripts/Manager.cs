@@ -32,6 +32,9 @@ public class Manager : MonoBehaviour
 
 	private void Update()
 	{
+		if (Input.GetKeyDown(KeyCode.Escape))
+			Application.Quit();
+
 		isFoodOrdered = toggle.isOn;
 		text.text = "Ingredients " + ingredients + "\nCooked Food " + cookedFood + "\nFood Delivery " + foodForDelivery + "\nIngredient Delivery " + ingredientForDelivery + "\nIngredients Required " + !(ingredients >= 15) + "\nTake Rest " + (cookedFood >= 10);
 	}
